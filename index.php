@@ -37,20 +37,27 @@
       <div class="payment_container">
         <div class="rejected">
           <h2>Pagamenti rifiutati</h2>
+          <div class="rejected_cont">
+            <!-- inserimento template handlebars -->
+          </div>
         </div>
 
         <div class="pending">
           <h2>Pagamenti in sospeso</h2>
+          <div class="pending_cont">
+            <!-- inserimento template handlebars -->
+          </div>
         </div>
 
         <div class="accepted">
           <h2>Pagamenti accettati</h2>
+          <div class="accepted_cont">
+            <!-- inserimento template handlebars -->
+          </div>
         </div>
       </div>
 
     </div>
-
-
   </body>
 
   <!-- SCRIPT HANDLEBARS -->
