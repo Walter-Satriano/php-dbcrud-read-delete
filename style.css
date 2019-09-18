@@ -23,12 +23,36 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
+  text-align: center;
 }
 
-.payment_container h2 {
+.rejected h2, .pending h2, .accepted h2 {
   margin-bottom: 20px;
 }
 
 .payment_list {
-  margin-bottom: 20px;
+  margin-bottom: 30px;
+  border: 2px solid black;
+  border-radius: 15%;
+  width: 250px;
+}
+
+.payment_list span {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.payment_list p {
+  padding: 10px 0;
+  font-size: 16px;
+}
+
+.payment_list .delete_button {
+  margin: 10px 0;
+  padding: 8px;
+  border-radius: 5px;
+  border-style: none;
+  background-color: orange;
+  font-weight: bold;
+  cursor: pointer;
 }
