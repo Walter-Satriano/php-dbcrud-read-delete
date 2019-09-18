@@ -58,7 +58,7 @@
       </div>
               <span></span>
     </div>
-  </body> <button type="button" name="button"></button>
+  </body>
 
   <!-- SCRIPT HANDLEBARS -->
   <script id="template_payments" type="text/x-handlebars-template">
