@@ -56,14 +56,13 @@
           </div>
         </div>
       </div>
-              <span></span>
+
     </div>
   </body>
 
   <!-- SCRIPT HANDLEBARS -->
   <script id="template_payments" type="text/x-handlebars-template">
     <div class="payment_list" data-id={{id}}>
-      <!-- <i class="far fa-times-circle delete_button"></i> -->
       <p><span>Stato: </span>{{status}}</p>
       <p><span>Prezzo: </span>{{price}}</p>
       <p><span>ID Prenotazione: </span>{{prenotazione_id}}</p>
