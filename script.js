@@ -1,9 +1,19 @@
 $(document).ready(function() {
 
   getPagamenti();
+  $(document).on("click", ".payment_list .delete_button", deletePagamenti)
+
+  //funzione per pulire il ogni contenitore ad ogni chiamata getPagamenti
+  function reset() {
+    $(".rejected_cont").html("");
+    $(".pending_cont").html("");
+    $(".accepted_cont").html("");
+  }
 
   //funzione per ottenere i dati dei pagamenti
   function getPagamenti() {
+
+    reset();
 
     $.ajax({
 
@@ -48,16 +58,40 @@ $(document).ready(function() {
 
       // condizione che permette di stampare in 3 posizioni differenti
       if (stato == "rejected") {
-        $(".rejected").append(html);
+        $(".rejected_cont").append(html);
       }
       else if (stato == "pending") {
-        $(".pending").append(html);
+        $(".pending_cont").append(html);
       }
       else if (stato == "accepted") {
-        $(".accepted").append(html);
+        $(".accepted_cont").append(html);
       }
 
     }
+  }
+
+  //funzione per eliminare i pagamenti
+  function deletePagamenti() {
+
+    var deleteButton = $(this);
+    var box = deleteButton.parent();
+    var id_pagamento = box.data("id");
+
+    $.ajax({
+
+      url:"api-pagamenti-delete.php",
+      method: "GET",
+      data: {id: id_pagamento},
+
+      success: function(data) {
+
+        getPagamenti();
+        console.log("dentro delete", data);
+      },
+      error: function() {
+        alert("Errore in deleteRoom");
+      }
+    });
   }
 
 
