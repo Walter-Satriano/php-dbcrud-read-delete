@@ -56,18 +56,19 @@
           </div>
         </div>
       </div>
-
+              <span></span>
     </div>
-  </body>
+  </body> <button type="button" name="button"></button>
 
   <!-- SCRIPT HANDLEBARS -->
   <script id="template_payments" type="text/x-handlebars-template">
     <div class="payment_list" data-id={{id}}>
-      <i class="far fa-times-circle delete_button"></i>
-      <p>Stato: {{status}}</p>
-      <p>Prezzo: {{price}}</p>
-      <p>ID Prenotazione: {{prenotazione_id}}</p>
-      <p>ID Pagante: {{pagante_id}}</p>
+      <!-- <i class="far fa-times-circle delete_button"></i> -->
+      <p><span>Stato: </span>{{status}}</p>
+      <p><span>Prezzo: </span>{{price}}</p>
+      <p><span>ID Prenotazione: </span>{{prenotazione_id}}</p>
+      <p><span>ID Pagante: </span>{{pagante_id}}</p>
+      <button class="delete_button" type="button" name="button">CANCELLA</button>
     </div>
   </script>
 
